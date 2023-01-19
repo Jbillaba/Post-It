@@ -20,6 +20,6 @@ class Notes(models.Model):
 class Board(models.Model):
     messages = models.ManyToManyField(Notes, related_name="messages")
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.messages
 
