@@ -12,8 +12,7 @@ class User(AbstractUser):
 
 class Notes(models.Model):
     message = models.CharField(max_length=280)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name="creator")
-
+    creator = models.CharField(max_length=280)
     def __str__(self):
         return self.message
 
